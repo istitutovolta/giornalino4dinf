@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giornalino di Baldeon</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #cceeff, #ffffff);
+      color: #800000;
+      text-align: center;
+    }
+
+    header {
+      background-color: #d00000;
+      color: white;
+      padding: 20px 0;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+
+	.message {
+      font-size: 1.5em;
+      margin: 30px auto;
+      max-width: 600px;
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+	.snowflake {
+      position: fixed;
+      top: -10px;
+      font-size: 24px;
+      color: white;
+      animation: fall linear infinite;
+    }
+
+	.tree {
+      font-size: 5em;
+      margin: 30px 0;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(100vh);
+      }
+    }
+  </style>
+</head>
+<body>
+	<header>
+		<h1>🎅 Buon Natale! 🎄</h1>
+	</header>
+
+	<div class="tree">🌟🎄🌟</div>
+
+	<div class="message">
+		Ti auguro un Natale pieno di gioia, amore e momenti speciali con le persone che ami.
+	</div>
+	<div>
+  		<h1>Giornalino di Baldeon</h1>
+	</div>
+	<div style="text-align: left;">
+  		<h3>Comandi Linux</h3>
+		<p>Ho capito che <b>pwd</b> visualizza il path assoluto della directory corrente. <b>mkdir</b> ti permette di creare una directory</p>
+	</div>
+
+	<!-- Fiocchi di neve -->
+	<script>
+		const snowflakeCount = 30;
+		for (let i = 0; i < snowflakeCount; i++) {
+			const snowflake = document.createElement("div");
+			snowflake.classList.add("snowflake");
+			snowflake.textContent = "❄";
+			snowflake.style.left = Math.random() * 100 + "vw";
+			snowflake.style.animationDuration = (Math.random() * 5 + 5) + "s";
+			snowflake.style.fontSize = (Math.random() * 10 + 10) + "px";
+			document.body.appendChild(snowflake);
+		}
+	</script>
+</body>
+</html>

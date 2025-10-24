@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il Giornalino - Home</title>
+    <style>
+        body {
+            font-family: "Helvetica", Arial, sans-serif;
+            margin: 0;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav {
+            background-color: #34495e;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            display: flex;
+            margin: 20px;
+            gap: 20px;
+        }
+
+        article {
+            flex: 3;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        article h2 {
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            color: #2c3e50;
+        }
+
+        .notizia {
+            margin-bottom: 20px;
+        }
+
+        .notizia img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        .notizia h3 {
+            margin: 10px 0 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Il Giornalino di Bernacchia</h1>
+        <p>Notizie fresche ogni giorno!</p>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Comandi Linux</a>
+        <a href="#">Gestione dei processi</a>
+        <a href="#">Gestione degli interrupt</a>
+        <a href="#">Gestione della memoria</a>
+    </nav>
+
+    <main>
+        <article>
+            <h2>Ultime Notizie</h2>
+
+            <div class="notizia">
+                <img src="notizia1.jpg" alt="Immagine Notizia 1" width="100px">
+                <h3>La scuola si rinnova: nuovi progetti per gli studenti</h3>
+                <p>Il nostro istituto ha avviato una serie di iniziative per promuovere la creatività e la collaborazione tra gli studenti...</p>
+                <a href="#">Leggi di più →</a>
+            </div>
+
+            <div class="notizia">
+                <img src="notizia2.jpg" alt="Immagine Notizia 2" width="100px">
+                <h3>Grande successo per la squadra di basket!</h3>
+                <p>La squadra della scuola ha vinto il torneo provinciale con una partita emozionante fino all’ultimo secondo...</p>
+                <a href="#">Leggi di più →</a>
+            </div>
+        </article>
+    </main>
+</body>
+</html>
+
+

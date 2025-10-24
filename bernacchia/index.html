@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giornalino di Bernacchia</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Creepster', cursive;
+      background-color: #000;
+      color: #f90;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 4em;
+      text-shadow: 0 0 20px #f60, 0 0 40px #f90;
+      margin-top: 50px;
+    }
+
+    p {
+      font-size: 1.5em;
+      color: #fff;
+    }
+
+    .pumpkin {
+      font-size: 5em;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .ghost {
+      position: absolute;
+      top: 50%;
+      left: -100px;
+      font-size: 3em;
+      opacity: 0.7;
+      animation: moveGhost 10s linear infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    @keyframes moveGhost {
+      0% { left: -100px; transform: scale(1); opacity: 0.2; }
+      50% { opacity: 1; }
+      100% { left: 110%; transform: scale(1.2); opacity: 0.2; }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="ghost">👻</div>
+  <h1>Benvenuto alla Notte di Halloween!</h1>
+  <p>Dolcetto o scherzetto? 🕸️</p>
+  <div class="pumpkin">🎃</div>
+	<div>
+      <a href="giornalino.html">Giornalino di Bernacchia</a>
+	</div>
+
+  <!-- Fantasmi -->
+  <script>
+    function createGhost() {
+      const ghost = document.createElement('div');
+      ghost.classList.add('ghost');
+      ghost.textContent = '👻';
+      ghost.style.top = Math.random() * 80 + '%';
+      ghost.style.animationDuration = (6 + Math.random() * 5) + 's';
+      document.body.appendChild(ghost);
+      setTimeout(() => ghost.remove(), 11000);
+    }
+
+    setInterval(createGhost, 3000);
+  </script>
+</body>
+</html>
+
